@@ -1,4 +1,4 @@
-V5
+V51
 <script type="text/javascript" charset="utf-8">
 function getParam(name, url) {
     if (!url) url = window.location.href;
@@ -29,9 +29,9 @@ var browserLanguage = function() {
 
 String pid = getParam('p');
 
-if (pid == "") {
-	function autoLink(){location.href="https://ibstyle.tk/";}setTimeout("autoLink()",0);
-}
+//if (pid == "") {
+//	function autoLink(){location.href="https://ibstyle.tk/";}setTimeout("autoLink()",0);
+//};
 
 // 日本語
 if( browserLanguage() == 'ja' ){
@@ -44,7 +44,7 @@ else if( browserLanguage() == 'en' ){
     String lurl = "https://en.ibstyle.tk/posts/";
     String jurl = lurl.concat(pid);
     function autoLink(){location.href=jurl;}setTimeout("autoLink()",1);
-	echo jurl;
+	echo pid;
 }
 else{
     String lurl = "https://en.ibstyle.tk/posts/";
