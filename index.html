@@ -1,4 +1,4 @@
-V55
+<title>IB Style<title>
 <script type="text/javascript" charset="utf-8">
 function getParam(name, url) {
     if (!url) url = window.location.href;
@@ -27,31 +27,27 @@ var browserLanguage = function() {
     }
 }
 
-//var pid = getParam('p');
-var pid = new String('000008');
+var pid = getParam('p');
 
-//if (pid == "") {
-//	function autoLink(){location.href="https://ibstyle.tk/";}setTimeout("autoLink()",0);
-//};
+if (pid == "") {
+	function autoLink(){location.href="https://ibstyle.tk/";}setTimeout("autoLink()",0);
+};
 
 // 日本語
 if( browserLanguage() == 'ja' ){
 	var lurl = new String("https://ja.ibstyle.tk/posts/");
     var jurl = lurl.concat(pid);
-    function autoLink(){location.href=jurl;}setTimeout("autoLink()",1);
-	window.alert(jurl);
+    function autoLink(){location.href=jurl;}setTimeout("autoLink()",0);
 }
 // 英語
 else if( browserLanguage() == 'en' ){
 	var lurl = new String("https://en.ibstyle.tk/posts/");
     var jurl = lurl.concat(pid);
-    function autoLink(){location.href=jurl;}setTimeout("autoLink()",1);
-	window.alert(jurl);
+    function autoLink(){location.href=jurl;}setTimeout("autoLink()",0);
 }
 else{
 	var lurl = new String("https://en.ibstyle.tk/posts/");
     var jurl = lurl.concat(pid);
-    function autoLink(){location.href=jurl;}setTimeout("autoLink()",1);
-	window.alert(jurl);
+    function autoLink(){location.href=jurl;}setTimeout("autoLink()",0);
 }
 </script>
