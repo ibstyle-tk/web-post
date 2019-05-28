@@ -1,4 +1,4 @@
-V51
+V52
 <script type="text/javascript" charset="utf-8">
 function getParam(name, url) {
     if (!url) url = window.location.href;
@@ -44,7 +44,7 @@ else if( browserLanguage() == 'en' ){
     String lurl = "https://en.ibstyle.tk/posts/";
     String jurl = lurl.concat(pid);
     function autoLink(){location.href=jurl;}setTimeout("autoLink()",1);
-	echo pid;
+	window.alert(jurl);
 }
 else{
     String lurl = "https://en.ibstyle.tk/posts/";
