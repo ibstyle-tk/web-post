@@ -26,17 +26,27 @@ var browserLanguage = function() {
     }
 }
 
-var pid = getParam('p');
+String pid = getParam('p');
+
+if (pid == "") {
+	function autoLink(){location.href="https://ibstyle.tk/";}setTimeout("autoLink()",0);
+}
 
 // 日本語
 if( browserLanguage() == 'ja' ){
-    function autoLink(){location.href="https://ja.ibstyle.tk/posts/" + pid;}setTimeout("autoLink()",0);
+	String lurl = "https://ja.ibstyle.tk/posts/";
+    String jurl = lurl.concat(pid);
+    function autoLink(){location.href=jurl;}setTimeout("autoLink()",0);
 }
 // 英語
 else if( browserLanguage() == 'en' ){
-    function autoLink(){location.href="https://en.ibstyle.tk/posts/" + pid;}setTimeout("autoLink()",0);
+    String lurl = "https://ja.ibstyle.tk/posts/";
+    String jurl = lurl.concat(pid);
+    function autoLink(){location.href=jurl;}setTimeout("autoLink()",0);
 }
 else{
-    function autoLink(){location.href="https://ja.ibstyle.tk/posts/" + pid;}setTimeout("autoLink()",0);
+    String lurl = "https://ja.ibstyle.tk/posts/";
+    String jurl = lurl.concat(pid);
+    function autoLink(){location.href=jurl;}setTimeout("autoLink()",0);
 }
 </script>
