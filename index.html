@@ -1,0 +1,42 @@
+<script type="text/javascript" charset="utf-8">
+function getParam(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var browserLanguage = function() {
+    var ua = window.navigator.userAgent.toLowerCase();
+    try {
+        // chrome
+        if( ua.indexOf( 'chrome' ) != -1 ){
+            return ( navigator.languages[0] || navigator.browserLanguage || navigator.language || navigator.userLanguage).substr(0,2);
+        }
+        // それ以外
+        else{
+            return ( navigator.browserLanguage || navigator.language || navigator.userLanguage).substr(0,2);
+        }
+    }
+    catch( e ) {
+        return undefined;
+    }
+}
+
+var pid = getParam('p');
+
+// 日本語
+if( browserLanguage() == 'ja' ){
+    function autoLink(){location.href="https://ja.ibstyle.tk/posts/" + pid;}setTimeout("autoLink()",0);
+}
+// 英語
+else if( browserLanguage() == 'en' ){
+    function autoLink(){location.href="https://en.ibstyle.tk/posts/" + pid;}setTimeout("autoLink()",0);
+}
+else{
+    function autoLink(){location.href="https://ja.ibstyle.tk/posts/" + pid;}setTimeout("autoLink()",0);
+}
+</script>
