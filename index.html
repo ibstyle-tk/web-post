@@ -29,9 +29,7 @@ var browserLanguage = function() {
 
 var pid = getParam('p');
 
-if (pid == NULL) {
-	function autoLink(){location.href="https://ibstyle.tk/";}setTimeout("autoLink()",0);
-} else {
+if (pid) {
 
 // 日本語
 if( browserLanguage() == 'ja' ){
@@ -50,5 +48,7 @@ else{
     var jurl = lurl.concat(pid);
     function autoLink(){location.href=jurl;}setTimeout("autoLink()",0);
 }
-}
+} else {
+	function autoLink(){location.href="https://ibstyle.tk/";}setTimeout("autoLink()",0);
+};
 </script>
