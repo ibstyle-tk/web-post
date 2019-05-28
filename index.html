@@ -31,7 +31,7 @@ var pid = getParam('p');
 
 if (pid == "null") {
 	function autoLink(){location.href="https://ibstyle.tk/";}setTimeout("autoLink()",0);
-};
+} else {
 
 // 日本語
 if( browserLanguage() == 'ja' ){
@@ -49,5 +49,6 @@ else{
 	var lurl = new String("https://en.ibstyle.tk/posts/");
     var jurl = lurl.concat(pid);
     function autoLink(){location.href=jurl;}setTimeout("autoLink()",0);
+}
 }
 </script>
